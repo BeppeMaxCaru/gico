@@ -9,7 +9,7 @@
     background-color: rgb(255, 255, 255);
     border: 1px;
     border-radius: 20px;
-    /*border-color: black;*/
+    border-color: black;
     border-style: solid;
     margin-bottom: 40px;
 }
@@ -47,3 +47,14 @@ a {
     top: 10%;
     text-decoration: none;
 }
+
+.dark-mode {
+    background-color: rgb(27, 27, 27);
+    color: rgb(27, 27, 27);
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
