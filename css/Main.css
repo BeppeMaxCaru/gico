@@ -1,3 +1,32 @@
+/* Ensure the body and html take up the full height and have no margin */
+body, html {
+    margin: 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    padding: 10px;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border: 0px;
+    margin: 0px;
+}
+
+ul:hover {
+    cursor: pointer;
+}
+
 .container {
     display: flex;
     justify-content: space-evenly;
@@ -16,6 +45,10 @@
 
 a {
     text-decoration: none;
+}
+
+a:visited {
+    color: currentColor;
 }
 
 .rectangle:after {
@@ -49,8 +82,8 @@ a {
 }
 
 .dark-mode {
-    background-color: rgb(27, 27, 27);
-    color: rgb(27, 27, 27);
+    background-color: #1f1f1f;
+    color: #1f1f1f;
 }
 
 button {
@@ -58,3 +91,65 @@ button {
     cursor: pointer;
 }
 
+.image-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.image-square {
+    height: 75px;
+    aspect-ratio: 1;
+}
+
+.background-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../assets/Sitting_man.jpg);
+    z-index: -1;
+}
+
+.middle_page_text_container {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+h1.middle_page_text {
+    color: white;
+    size: 12;
+    font-family: 'Libre Baskerville', times, serif;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1.4;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+}

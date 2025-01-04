@@ -10,121 +10,172 @@
 </head>
 <body>
 
+    <div class="background-image-container"></div>
+
+    <header>
+        <div>
+            <h1 style="color: rgb(73, 140, 234); font-family:Arial, Helvetica, sans-serif; margin-left: 20px;">
+                <b>
+                    GICO
+                </b>
+            </h1>
+        </div>
+        <div>
+            <ul style="color: rgb(255, 255, 255); list-style: none; display: inline-flex; margin-right: 25px;">
+                <li><a href="https://www.linkedin.com/in/giuseppe-massimiliano-carugno-746691191/" target="_blank" rel="noopener noreferrer">Team</a></li>
+                <li>Holdings</li>
+                <li>Philosophy</li>
+                <li>Technology</li>
+                <li>Investors relations</li>
+                <li>Achievements</li>
+                <li>Tech stack</li>
+            </ul>
+        </div>
+        <div class="image-square">
+            <img src="assets/Swiss_flag.jpg" alt="swiss flag">
+        </div>
+    </header>
+
     <div>
-        <h1 style="text-align: center; color: rgb(73, 140, 234); margin-top: 30px; font-family:Arial, Helvetica, sans-serif">
-            <b>
-                GICO
-            </b>
-        </h1>
-        <button onclick="toggleDarkMode()">
-            <svg width="30" height="30" style="position: absolute; top: 0; right: 0; padding: 10" id="light-icon">
-                <circle cx="15" cy="15" r="6" fill="rgb(255, 255, 255)"/>
-                <line
-                    id="ray"
-                    stroke="rgb(255, 255, 255)"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    x1="15"
-                    y1="1"
-                    x2="15"
-                    y2="4"
-                ></line>
+        <div>
+
+            <!--
+            <h1 style="text-align: center; color: rgb(73, 140, 234); margin-top: 30px; font-family:Arial, Helvetica, sans-serif">
+                <b>
+                    GICO
+                </b>
+            </h1>
+            -->
+            
+            <!--
+            **button to toggle between dark and light mode**
+            <button onclick="toggleDarkMode()">
+                <svg width="30" height="30" style="position: absolute; top: 0; right: 0; padding: 10" id="light-icon">
+                    <circle cx="15" cy="15" r="6" fill="rgb(255, 255, 255)"/>
+                    <line
+                        id="ray"
+                        stroke="rgb(255, 255, 255)"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        x1="15"
+                        y1="1"
+                        x2="15"
+                        y2="4"
+                    ></line>
+            
+                    <use href="#ray" transform="rotate(45 15 15)" />
+                    <use href="#ray" transform="rotate(90 15 15)" />
+                    <use href="#ray" transform="rotate(135 15 15)" />
+                    <use href="#ray" transform="rotate(180 15 15)" />
+                    <use href="#ray" transform="rotate(225 15 15)" />
+                    <use href="#ray" transform="rotate(270 15 15)" />
+                    <use href="#ray" transform="rotate(315 15 15)" />
+                </svg>
+                <svg width="30" height="30" style="position: absolute; top: 0; right: 0; padding: 10" id="dark-icon">
+                    <path
+                        fill="currentColor"
+                        d="
+                        M 23, 5
+                        A 12 12 0 1 0 23, 25
+                        A 12 12 0 0 1 23, 5"
+                    />
+                </svg>
+            </button>
+            -->
+            
+            <!--
+            <p id="intro1" style="color: rgb(255, 255, 255); text-align: center; font-family: Arial, Helvetica, sans-serif">
+                Disclaimer: I'm still clueless about running a business but I need to start from somewhere so here we go
+            </p>
+            <p id="intro2" style="color: rgb(255, 255, 255); text-align: center; font-family: Arial, Helvetica, sans-serif">
+                This is my self-made MBA + the money comes all out of my personal pockets +
+                I'm doing everything myself without 3rd parties involved (from registration to web dev)
+            </p>
+            -->
+
+        </div>
+
+        <!--
+        <div class="container" style="text-align: center; margin-top: 80px; font-family:Arial, Helvetica, sans-serif">
+            <a href="https://www.linkedin.com/in/giuseppe-massimiliano-carugno-746691191/" target="_blank" rel="noopener noreferrer">
+                <div class="rectangle">
+                    <p>
+                        Team
+                    </p>
+                    <p>
+                        People in charge of running the company (from operations to accounting)
+                    </p>
+                </div>
+            </a>        
+            <a href="https://docs.google.com/spreadsheets/d/11qs5vlJcVrc4PgL01t3pcPXNfkZsEW2c_p-nTxcw8as/edit?gid=770289657#gid=770289657" target="_blank" rel="noopener noreferrer">
+                <div class="rectangle">
+                    <p>
+                        Holdings!
+                    </p>
+                    <p>
+                        Currently this page is in testing, I need to decide the source to use for them.
+                    </p>
+                </div>
+            </a>
+            <a href="html/Philosophy.html">
+                <div class="rectangle">
+                    <p>
+                        Philosophy
+                    </p>
+                    <p>
+                        The plan for this section would be to become some kind of IPS. Also plan to add two additional section: achievements/milestones + resources used?
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="container" style="text-align: center; font-family:Arial, Helvetica, sans-serif">
+            <a href="html/Investor_relations_page.html">
+                <div class="rectangle">
+                    <p>
+                        Investors relations!
+                    </p>
+                    <p>
+                        Here's a couple of helpful resources if you're interested in hearing about this initiative but you're not within the group already
+                    </p>
+                </div>
+            </a>
+            <a href="html/Investor_relations_page.html">
+                <div class="rectangle">
+                    <p>
+                        Achievements!
+                    </p>
+                    <p>
+                        Objectives completed
+                    </p>
+                </div>
+            </a>
+            <a href="html/Tech_stack.html">
+                <div class="rectangle">
+                    <p>
+                        Tech stack!
+                    </p>
+                    <p>
+                        Information about the technology
+                    </p>
+                </div>
+            </a>
+        </div>
+        -->
         
-                <use href="#ray" transform="rotate(45 15 15)" />
-                <use href="#ray" transform="rotate(90 15 15)" />
-                <use href="#ray" transform="rotate(135 15 15)" />
-                <use href="#ray" transform="rotate(180 15 15)" />
-                <use href="#ray" transform="rotate(225 15 15)" />
-                <use href="#ray" transform="rotate(270 15 15)" />
-                <use href="#ray" transform="rotate(315 15 15)" />
-            </svg>
-            <svg width="30" height="30" style="position: absolute; top: 0; right: 0; padding: 10" id="dark-icon">
-                <path
-                    fill="currentColor"
-                    d="
-                    M 23, 5
-                    A 12 12 0 1 0 23, 25
-                    A 12 12 0 0 1 23, 5"
-                />
-            </svg>
-        </button>
-    </div>
+        <div class="middle_page_text_container">
+            <h1 class="middle_page_text">
+                Swiss made
+                <br>
+                Excellence focused
+                <!--
+                <br>
+                Long-term oriented
+                -->
+            </h1>
+        </div>
 
-    <div>
-        <p id="intro1" style="color: rgb(255, 255, 255); text-align: center; font-family: Arial, Helvetica, sans-serif">
-            Disclaimer: I'm still clueless about running a business but I need to start from somewhere so here we go
-        </p>
-        <p id="intro2" style="color: rgb(255, 255, 255); text-align: center; font-family: Arial, Helvetica, sans-serif">
-            This is my self-made MBA + the money comes all out of my personal pockets +
-            I'm doing everything myself without 3rd parties involved (from registration to web dev)
-        </p>
     </div>
-
-    <div class="container" style="text-align: center; margin-top: 80px; font-family:Arial, Helvetica, sans-serif">
-        <a href="https://www.linkedin.com/in/giuseppe-massimiliano-carugno-746691191/" target="_blank" rel="noopener noreferrer">
-            <div class="rectangle">
-                <p>
-                    Team
-                </p>
-                <p>
-                    People in charge of running the company (from operations to accounting)
-                </p>
-            </div>
-        </a>        
-        <a href="https://docs.google.com/spreadsheets/d/11qs5vlJcVrc4PgL01t3pcPXNfkZsEW2c_p-nTxcw8as/edit?gid=770289657#gid=770289657" target="_blank" rel="noopener noreferrer">
-            <div class="rectangle">
-                <p>
-                    Holdings!
-                </p>
-                <p>
-                    Currently this page is in testing, I need to decide the source to use for them.
-                </p>
-            </div>
-        </a>
-        <a href="html/Philosophy.html">
-            <div class="rectangle">
-                <p>
-                    Philosophy
-                </p>
-                <p>
-                    The plan for this section would be to become some kind of IPS. Also plan to add two additional section: achievements/milestones + resources used?
-                </p>
-            </div>
-        </a>
-    </div>
-
-    <div class="container" style="text-align: center; font-family:Arial, Helvetica, sans-serif">
-        <a href="html/Investor_relations_page.html">
-            <div class="rectangle">
-                <p>
-                    Investors relations!
-                </p>
-                <p>
-                    Here's a couple of helpful resources if you're interested in hearing about this initiative but you're not within the group already
-                </p>
-            </div>
-        </a>
-        <a href="html/Investor_relations_page.html">
-            <div class="rectangle">
-                <p>
-                    Achievements!
-                </p>
-                <p>
-                    Objectives completed
-                </p>
-            </div>
-        </a>
-        <a href="html/Tech_stack.html">
-            <div class="rectangle">
-                <p>
-                    Tech stack!
-                </p>
-                <p>
-                    Information about the technology
-                </p>
-            </div>
-        </a>
-    </div>
-
+    
 </body>
 </html>
