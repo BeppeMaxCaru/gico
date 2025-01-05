@@ -139,6 +139,7 @@ img {
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    z-index: -1;
 }
 
 h1.middle_page_text {
