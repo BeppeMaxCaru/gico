@@ -1,156 +1,181 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 /* Ensure the body and html take up the full height and have no margin */
-body, html {
-    margin: 0;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-  }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: system-ui, sans-serif;
+  background-color: #fff;
+  color: #222;
+}
+
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background-color: #111;
+        color: #eee;
+    }
+}
+
+body {
+  display: inline-grid;
+  justify-content: center;
+  align-items: center;
+}
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 li {
-    padding: 10px;
-    font-family: 'Lato', Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 1px;
-    border: 0px;
-    margin: 0px;
+  padding: 10px;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border: 0px;
+  margin: 0px;
 }
 
 ul:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .container {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .rectangle {
-    width: 250px;
-    height: 180px;
-    background-color: rgb(255, 255, 255);
-    border: 1px;
-    border-radius: 20px;
-    border-color: black;
-    border-style: solid;
-    margin-bottom: 40px;
+  width: 250px;
+  height: 180px;
+  background-color: rgb(255, 255, 255);
+  border: 1px;
+  border-radius: 20px;
+  border-color: black;
+  border-style: solid;
+  margin-bottom: 40px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:visited {
-    color: currentColor;
+  color: currentColor;
 }
 
 .rectangle:after {
-    transform: scale(0, 0);
-    transform-origin: top left;
+  transform: scale(0, 0);
+  transform-origin: top left;
 }
 
 .rectangle:hover {
-    background-color: rgb(73, 140, 234);
-    transition: color 0.25s ease;
+  background-color: rgb(73, 140, 234);
+  transition: color 0.25s ease;
 }
 
 .rectangle:hover::after {
-    transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
 .rectangle p {
-    text-align: center;
-    text-decoration: underline;
+  text-align: center;
+  text-decoration: underline;
 }
 
 .rectangle p:first-child {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .rectangle p:not(:first-child) {
-    color: black;
-    position: relative;
-    top: 10%;
-    text-decoration: none;
+  color: black;
+  position: relative;
+  top: 10%;
+  text-decoration: none;
 }
 
 .dark-mode {
-    background-color: #1f1f1f;
-    color: #1f1f1f;
+  background-color: #1f1f1f;
+  color: #1f1f1f;
 }
 
 button {
-    all: unset;
-    cursor: pointer;
+  all: unset;
+  cursor: pointer;
 }
 
 .image-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin: 0;
+  padding: 0;
 }
 
 .image-square {
-    height: 75px;
-    aspect-ratio: 1;
+  height: 75px;
+  aspect-ratio: 1;
 }
 
 .background-image-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url(../assets/Sitting_man.jpg);
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../assets/Sitting_man.jpg);
+  z-index: -1;
 }
 
 .middle_page_text_container {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translate(0, -50%);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(0, -50%);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  z-index: -1;
 }
 
 h1.middle_page_text {
-    color: white;
-    size: 12;
-    font-family: 'Libre Baskerville', times, serif;
-    display: inline-block;
-    font-weight: 400;
-    font-size: 60px;
-    line-height: 1.4;
-    font-style: normal;
-    text-rendering: optimizeLegibility;
-    margin: 0;
+  color: white;
+  size: 12;
+  font-family: 'Libre Baskerville', times, serif;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 1.4;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  margin: 0;
 }
