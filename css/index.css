@@ -27,9 +27,16 @@ html, body {
 }
 
 body {
-  display: inline-grid;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.center-wrapper {
+  display: flex;
+  flex-direction: column;    /* stack header + ul */
+  align-items: center;       /* keep them centered horizontally */
+  gap: 20px; 
 }
 
 header {
@@ -109,6 +116,10 @@ a:visited {
 .dark-mode {
   background-color: #1f1f1f;
   color: #1f1f1f;
+}
+
+.text-primary {
+  color: #eee
 }
 
 button {
