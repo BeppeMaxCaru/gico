@@ -1,10 +1,15 @@
-html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+/* ==========================================================================
+   2. RESET & NORMALIZATION (The Modern Way)
+   ========================================================================== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
+html {
+  height: 100%;
+  scroll-behavior: var(--scroll-behavior);
 }
 
 /* Ensure the body and html take up the full height and have no margin */
@@ -15,8 +20,8 @@ html, body {
   min-height: 100vh;
   overflow-x: hidden;
   font-family: system-ui, sans-serif;
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +38,7 @@ body {
 }
 
 .center-wrapper {
+  justify-content: center;
   display: flex;
   flex-direction: column;    /* stack header + ul */
   align-items: center;       /* keep them centered horizontally */
@@ -64,53 +70,12 @@ ul:hover {
   justify-content: space-evenly;
 }
 
-.rectangle {
-  width: 250px;
-  height: 180px;
-  background-color: rgb(255, 255, 255);
-  border: 1px;
-  border-radius: 20px;
-  border-color: black;
-  border-style: solid;
-  margin-bottom: 40px;
-}
-
 a {
   text-decoration: none;
 }
 
 a:visited {
   color: currentColor;
-}
-
-.rectangle:after {
-  transform: scale(0, 0);
-  transform-origin: top left;
-}
-
-.rectangle:hover {
-  background-color: rgb(73, 140, 234);
-  transition: color 0.25s ease;
-}
-
-.rectangle:hover::after {
-  transform: scale(1, 1);
-}
-
-.rectangle p {
-  text-align: center;
-  text-decoration: underline;
-}
-
-.rectangle p:first-child {
-  margin-top: 20px;
-}
-
-.rectangle p:not(:first-child) {
-  color: black;
-  position: relative;
-  top: 10%;
-  text-decoration: none;
 }
 
 .dark-mode {
@@ -127,56 +92,6 @@ button {
   cursor: pointer;
 }
 
-.image-container {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  margin: 0;
-  padding: 0;
-}
-
-.image-square {
-  height: 75px;
-  aspect-ratio: 1;
-}
-
-.background-image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  background-image: url(../assets/Sitting_man.jpg);
-  z-index: -1;
-}
-
-.middle_page_text_container {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translate(0, -50%);
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  z-index: -1;
-}
 
 h1.middle_page_text {
   color: white;
@@ -189,4 +104,87 @@ h1.middle_page_text {
   font-style: normal;
   text-rendering: optimizeLegibility;
   margin: 0;
+}
+
+.menu-container {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+}
+
+.hamburger {
+  width: 3rem;
+  aspect-ratio: 1;
+  border: none;
+  background: #222;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.hamburger span {
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background: white;
+  border-radius: 0.1rem;
+  transform-origin: center;
+  left: 20%;
+  transition: transform  0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+}
+
+/* POSIZIONAMENTO INIZIALE (3 LINEE) */
+.hamburger span:nth-child(1) { top: 30%; transform: translateY(-50%); }
+.hamburger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.hamburger span:nth-child(3) { top: 70%; transform: translateY(-50%); }
+
+.hamburger.is-active span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+  /*transform: translate(-20px, -50%);*/ /* Scivola via mentre sparisce */
+}
+
+.hamburger.is-active span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Dropdown menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  min-width: 150px;
+  overflow: hidden;
+}
+
+.dropdown ul {
+  padding-inline-start: 0%;
+}
+
+.dropdown ul li {
+  margin: 10px 0;
+  padding: 5px;
+  background: #222;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+/* Dropdown links */
+.dropdown a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Show menu */
+.dropdown.show {
+  display: block;
 }

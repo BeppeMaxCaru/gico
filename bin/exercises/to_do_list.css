@@ -1,0 +1,12 @@
+.centered-div {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.centered-div * {
+
+}
