@@ -1,9 +1,9 @@
 const menuOptions = {
   'default': [
-    { label: 'About me', href: 'html/about-me/index.html'}
+    { label: 'About me', href: '/about-me/'}
   ],
   'about-me': [
-    { label: 'Home', href: '../../index.html'},
+    { label: 'Home', href: '/'},
   ]
 }
 
